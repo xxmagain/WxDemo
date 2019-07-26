@@ -1,0 +1,19 @@
+<!--pages/dianpu/store.wxml-->
+<view class='body'>
+  <view class='store'>
+    <view class='storeItem' wx:for="{{storeList}}" wx:key="{{item.id}}">
+      <view class='top'>
+        <image class='img' src='{{item.image}}' lazy-load="true"></image>
+        <view class='top-right'>
+          <text class='name'>{{item.name}}</text>
+          <text class='desc'>{{item.desc}}</text>
+        </view>
+      </view>
+      <scroll-view class='bottom' scroll-x>
+        <view  wx:for="{{item.images}}" wx:key="{{item.id}}" class='bottom-item'>
+          <image class='img-bottom' src='{{item}}' lazy-load="true" mode="scaleToFill"></image>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

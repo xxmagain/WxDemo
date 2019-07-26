@@ -1,0 +1,48 @@
+<!--pages/editAddress/editAddress.wxml-->
+<view class='name'>
+  <text class='desc'>收件人</text>
+  <input bindinput='bindName' placeholder='请输入收件人姓名' maxlength='6' value="{{name}}" type="text" placeholder-class="place-text" class='inputStyle'></input>
+</view>
+<view class='name'>
+  <text class='desc'>手机号码</text>
+  <input bindinput='bindPhone' placeholder='请输入手机号码' maxlength='11' value="{{phone}}" type="number" placeholder-class="place-text" class='inputStyle'></input>
+</view>
+<view class='name'>
+  <text class='desc'>所在区域</text>
+  <view class='addressView'  bindtap="selectDistrict">
+    <text class='address-text'>{{areaInfo}}</text>
+    <text class='iconfont icon-right'></text>
+  </view>
+</view>
+<view class='name'>
+  <text class='desc'>详细地址</text>
+  <input bindinput='bindArressDetail' placeholder='请输入详细地址' maxlength='15' value="{{addressDetail}}" type="text" placeholder-class="place-text" class='inputStyle'></input>
+</view>
+<view class='defult'>
+  <text class='desc'>设为默认地址</text>
+  <switch checked='{{defult}}'  style='zoom:.9;margin-right:32rpx;' bindchange='switchChange'></switch>
+</view>
+
+<!--城市三级联动-->
+<view class="dialog-mask " style="z-index:11;visibility:{{addressMenuIsShow ? 'visible': 'hidden'}}"  />
+<!--使用动画时不能wx:if="{{city.length>0&&isVisible}}" ，不能hidden=''属性否则无动画效果-->
+<view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+  <view class="picker-header">
+    <text catchtap="cityCancel" class="cancel">取消</text>
+    <text catchtap="citySure" class="sure">确定</text>
+  </view>
+  <!--"可以显示默认的城市，使用后级联选择城市反应很慢就不使用了-->
+  <picker-view class="citys" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view-column>
+      <view wx:for="{{provinces}}" class="picker-item" wx:key="">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{city.name}}" class="picker-item" wx:key="">
+        {{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+<view class='save' bindtap='bindSave'>
+  <text class='saveAddress'>保存</text>
+</view>

@@ -1,0 +1,114 @@
+/* pages/editAddress/editAddress.wxss */
+.name{
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rpx;
+  height: 100rpx;
+  align-items: center;
+}
+.desc{
+  width:25%;
+  font-size: 28rpx;
+  margin-left: 32rpx;
+}
+.place-text{
+  width: 75%;
+  font-size: 24rpx;
+  color:#808080
+}
+.addressView{
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 32rpx;
+}
+.address-text{
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  color:#808080
+}
+.defult{
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  margin-top: 20rpx;
+}
+.picker-view {
+  width: 100%;
+  display: flex;
+  z-index: 12;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  height: 538rpx;
+}
+.picker-view .picker-header {
+  height: 104rpx;
+  border-bottom: 1rpx solid #EBEEF5;
+  color: #909090;
+  font-size: 34rpx;
+  width: 100%;
+}
+.picker-view .picker-header .cancel {
+  float: left;
+  height: 104rpx;
+  line-height: 104rpx;
+  display: inline-block;
+  margin-left: 32rpx;
+}
+.picker-view .picker-header .sure {
+  float: right;
+  color: #FFBF34;
+  height: 104rpx;
+  line-height: 104rpx;
+  margin-right: 32rpx;
+}
+.picker-view .citys {
+  height: 434rpx;
+  width: 100%;
+}
+.picker-view .citys .picker-item {
+  line-height: 68rpx !important;
+}
+.picker-view .picker-item {
+  line-height: 70rpx;
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  text-align: center;
+}
+.dialog-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 8;
+  background: rgba(0, 0, 0, 0.3);
+}
+.save{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0rpx;
+  height: 80rpx;
+  background:#fff;
+  align-items: center;
+  justify-content: center;
+}
+.saveAddress{
+  font-size: 30rpx;
+  color:  #1CD39B
+}
+.inputStyle{
+  font-size: 28rpx;
+}

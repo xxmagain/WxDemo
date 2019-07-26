@@ -1,0 +1,22 @@
+/* pages/editNick/editNick.wxss */
+.nick{
+  background: #fff;
+  margin-top: 20rpx;
+  padding: 32rpx;
+  justify-content: center
+}
+.save{
+  display: flex;
+  background: #fff;
+  margin-top: 60rpx;
+  padding: 32rpx;
+  justify-content: center
+}
+.save-text{
+  font-size: 32rpx;
+  color: #1CD39B
+}
+.place-text{
+  font-size: 32rpx;
+  color: #000
+}

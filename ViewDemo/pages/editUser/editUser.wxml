@@ -1,0 +1,15 @@
+<!--pages/editUser/editUser.wxml-->
+<view class='image-edit' bindtap='changeImage'>
+  <text class='desc-text'>头像</text>
+  <view class='right'>
+    <image class="userinfo-avatar" src="{{image}}" mode="cover"></image>
+    <text class="iconfont icon-right iconModules"></text>
+  </view>
+</view>
+<view class='nick-edit' bindtap='goToEditNick'>
+    <text class='desc-text'>昵称</text>
+    <view class='right'>
+      <text>{{name}}</text>
+      <text class="iconfont icon-right iconModules"></text>
+    </view>
+</view>

@@ -1,0 +1,36 @@
+/* pages/mine/mine.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding-bottom: 20rpx;
+}
+.userinfo-avatar{
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.line{
+   width:6rpx;
+  height:36rpx;
+  background:rgba(255,234,0,1);
+  border-radius:4rpx;
+  margin-right: 15rpx;
+  float: left;
+  margin-top: 12rpx;
+}
+.list{
+  margin: 32rpx
+}
+.list_item{
+  background: #fff;
+  padding: 30rpx;
+  height: 80rpx;
+}
+.right{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}

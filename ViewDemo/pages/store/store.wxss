@@ -1,0 +1,64 @@
+/* pages/dianpu/store.wxss */
+
+.store {
+  margin: 32rpx;
+}
+.storeItem{
+  background: #fff;
+  border-radius: 20rpx;
+  margin-bottom: 32rpx;
+}
+.top {
+  display: flex;
+  flex-direction: row;
+  height: 130rpx;
+  align-items: center;
+}
+
+.top-right {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  height: 80rpx;
+  justify-content: space-between;
+}
+
+.img {
+  margin-left: 20rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+}
+
+.name {
+  font-size: 26rpx;
+  color: #000;
+}
+
+.desc {
+  font-size: 20rpx;
+  color: #808080;
+}
+
+.bottom {
+  width: 98%;
+  height: 150rpx;
+  overflow: hidden;
+  padding: 20rpx;
+  white-space: nowrap;
+}
+
+.bottom-item {
+  width: 200rpx;
+  height: 150rpx;
+  margin-right: 23rpx;
+  display: inline-block;
+}
+
+.img-bottom {
+  width: 200rpx;
+  height: 150rpx;
+  margin-right: 23rpx;
+  display: inline-block;
+  border-radius: 10rpx
+}

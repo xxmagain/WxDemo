@@ -1,0 +1,56 @@
+<!--pages/mine/mine.wxml-->
+<view class="userinfo" bindtap="bindViewTap">
+    <image class="userinfo-avatar" src="{{image}}" mode="aspectFit"></image>
+    <text class="userinfo-nickname">{{name}}</text>
+</view>
+<view class='list'>
+  <view class='list_item'>
+    <view class='line'> </view>
+    <view class='right' >
+      <text class="desc">收藏</text>
+       <text class="iconfont icon-right iconModules"></text>
+    </view>
+  </view>
+  <view class='list_item'>
+    <view class='line'> </view>
+    <view class='right' >
+      <text class="desc">订单</text>
+        <text class="iconfont icon-right iconModules"></text>
+    </view>
+  </view>
+   <view class='list_item' bindtap='goToAddress'>
+    <view class='line'> </view>
+    <view class='right' >
+      <text class="desc">地址管理</text>
+        <text class="iconfont icon-right iconModules"></text>
+    </view>
+  </view>
+  <view class='list_item'>
+    <view class='line'> </view>
+    <view class='right' >
+      <text class="desc">关于我们</text>
+        <text class="iconfont icon-right iconModules"></text>
+    </view>
+  </view>
+  <view class='list_item'>
+    <view class='line'> </view>
+    <view class='right' >
+      <text class="desc">意见反馈</text>
+        <text class="iconfont icon-right iconModules"></text>
+    </view>
+  </view>
+  <view class='list_item'>
+    <view class='line'> </view>
+    <view class='right' >
+      <text class="desc">客服电话</text>
+        <text class="iconfont icon-right iconModules"></text>
+    </view>
+  </view>
+  <view class='list_item'>
+    <view class='line'> </view>
+   <view class='right' >
+      <text class="desc">设置</text>
+        <text class="iconfont icon-right iconModules"></text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<!--pages/editNick/editNick.wxml-->
+<view class='nick'>
+  <input bindinput='bindNick' placeholder='请输入昵称' maxlength='10' value="{{ nick }}" type="text"
+ placeholder-class="place-text"
+  ></input>
+</view>
+<view class='save' bindtap='saveNick'>
+  <text class='save-text'>保存</text>
+</view>

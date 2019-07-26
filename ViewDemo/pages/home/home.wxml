@@ -1,0 +1,84 @@
+<!--pages/home/home.wxml-->
+<swiper circular="true" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='swip'>
+  <block wx:for="{{imgUrls}}" wx:key="xx">
+    <swiper-item class='swip_item' >
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='modules'>
+  <view class='modulesItem'>
+    <text class="iconfont icon-fendi iconModules"></text>
+    <text class='modules_text'>粉底</text>
+  </view>
+  <view class='modulesItem'>
+    <text class="iconfont icon-jiemaogao iconModules"></text>
+    <text class='modules_text'>睫毛膏</text>
+  </view>
+  <view class='modulesItem'>
+    <text class="iconfont icon-meibi iconModules"></text>
+    <text class='modules_text'>眉笔</text>
+  </view>
+  <view class='modulesItem'>
+    <text class="iconfont icon-xiangshui iconModules"></text>
+    <text class='modules_text'>香水</text>
+  </view>
+</view>
+<view class='modules'>
+  <view class='modulesItem'>
+    <text class="iconfont icon-kouhong iconModules"></text>
+    <text class='modules_text'>口红</text>
+  </view>
+  <view class='modulesItem'>
+    <text class="iconfont icon-mianmo iconModules"></text>
+    <text class='modules_text'>面膜</text>
+  </view>
+  <view class='modulesItem'>
+    <text class="iconfont icon-ruye iconModules"></text>
+    <text class='modules_text'>乳液</text>
+  </view>
+  <view class='modulesItem'>
+    <text class="iconfont icon-BBshuang iconModules"></text>
+    <text class='modules_text'>BB霜</text>
+  </view>
+</view>
+<view class='discount' wx:if="{{ discount.length > 0 }}">
+  <view class='title'>
+    <text class='line'></text>
+    <h2>限时优惠</h2>
+  </view>
+  <view class='list'>
+    <view catchtap='toDetails' wx:for="{{discount}}" wx:key="{{item.id}}" data-id='{{item.id}}' data-from="1" data-cover="{{item.cover}}" class="{{item.id % 2 == 1 ? '' : '_item'}}  item">
+      <image class='img' src='{{item.cover}}' lazy-load="true"></image>
+      <view class='introduce'>
+        <text class='name'>{{item.title}}</text>
+        <view>
+          <text class='desc'>{{item.desc}}</text>
+        </view>
+        <view>
+          <text class='price'>￥{{item.price}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='discount' wx:if="{{ newList.length > 0 }}">
+  <view class='title'>
+    <text class='line'></text>
+    <h2>今日上新</h2>
+  </view>
+  <view class='list'>
+    <view catchtap='toDetails' wx:for="{{newList}}" wx:key="{{item.id}}" data-id='{{item.id}}' data-from="1" data-cover="{{item.cover}}" class="{{item.id % 2 == 1 ? '' : '_item'}}  item">
+      <image class='img' src='{{item.cover}}' lazy-load="true"></image>
+      <view class='introduce'>
+        <text class='name'>{{item.title}}</text>
+        <view>
+          <text class='desc'>{{item.desc}}</text>
+        </view>
+        <view>
+          <text class='price'>￥{{item.price}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
